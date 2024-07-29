@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Interest Groups</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body{
+            background: aliceblue;
+        }
+
+.heading{
+    background: linear-gradient(90deg, rgb(7, 23, 248), #2ec1fc,rgb(54, 243, 7)); -webkit-background-clip: text;
+     color: transparent;
+    display: inline-block;
+    margin-left:500px;
+    font-size: 55px;
+    text-align: center;
+}
+.game-container1{
+    display:flex;
+    gap:60px;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+.game-container1 .game{
+    padding:20px;
+    width:250px;
+    height:170px;
+    box-shadow: 0px 2px 8px 2px grey;
+    border-radius: 20px;
+}
+.game-container1 .game p{
+    
+   color:rgb(231, 10, 10);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.game-container1 .game #para{
+    font-size: 18px;
+    color:rgb(109, 173, 12);
+}
+.game-container1 button {
+    margin-left: 70px;
+    margin-top: 30px;
+    padding: 0.5em 1em;
+    border: none;
+    background-color: #0cf52b;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.game-container1 button:hover {
+    background-color: #03080e;
+}
+
+.game-container2{
+    display:flex;
+    gap:60px;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+.game-container2 .game{
+    padding:20px;
+    width:250px;
+    height:170px;
+    box-shadow: 0px 2px 8px 2px grey;
+    border-radius: 20px;
+}
+.game-container2 .game p{
+    color: red;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.game-container2 .game #para{
+    font-size: 18px;
+    color:rgb(109, 173, 12);
+}
+.game-container2 button {
+    margin-left: 70px;
+    margin-top: 30px;
+    padding: 0.5em 1em;
+    border: none;
+    background-color: #12fa31;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.game-container2 button:hover {
+    background-color: #010203;
+} 
+   </style>
+</head>
+<body>
+
+    <h1 class="heading">User Groups</h1>
+
+    <div class="game-container1">
+        <div class="game">
+             <p>Cricket</p>
+             <button id="btn">Join group</button>
+             <p id="para"></p>
+        </div>
+
+        <div class="game">
+            <p>Football</p>
+            <button id="btn">Join group</button>
+            <p id="para"></p>
+       </div>
+
+       <div class="game">
+            <p>Tennis</p>
+            <button id="btn">Join group</button>
+            <p id="para"></p>
+       </div>
+    </div>
+    
+
+    <div class="game-container2">
+        <div class="game">
+             <p>Hockey</p>
+             <button id="btn">Join group</button>
+             <p id="para"></p>
+        </div>
+
+        <div class="game">
+            <p>volley Ball</p>
+            <button id="btn">Join group</button>
+            <p id="para"></p>
+        </div>
+
+       <div class="game">
+            <p>Shuttle</p>
+            <button id="btn">Join group</button>
+            <p id="para"></p>
+       </div>
+    </div>
+            
+<script>
+    const games = document.querySelectorAll(".game");
+
+    games.forEach(game => {
+        
+    const btn = game.querySelector("#btn");
+    const para = game.querySelector("#para");
+    btn.addEventListener("click",function(){
+    para.innerText = "You are added to this group"; 
+    });
+});
+</script>
+    
+</body>
+</html>
